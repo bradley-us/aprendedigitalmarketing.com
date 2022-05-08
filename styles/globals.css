@@ -19,12 +19,6 @@ a {
   box-sizing: border-box;
 }
 
-.ghola{
-position: absolute;
-width: 1440px;
-height: 197px;
-left: 1px;
-top: 878px;
-
-background: #EBEBEB;
+.bgSp1 {
+  background: linear-gradient(180deg, #EBEBEB 0.01%, #E2E8F0 0.32%, #D0F1ED 100%);
 }

@@ -18,3 +18,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.ghola{
+position: absolute;
+width: 1440px;
+height: 197px;
+left: 1px;
+top: 878px;
+
+background: #EBEBEB;
+}

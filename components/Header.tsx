@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import LongMenu from "./mui_components/Menu"
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <header className='py-5 flex flex-row justify-between items-center'>
       <figure>

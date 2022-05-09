@@ -9,7 +9,7 @@ export interface ILayout {
   children: ReactNode
 }
 
-const Layout = ({title, children} : ILayout) => {
+const Layout = ({title, children} : ILayout): JSX.Element => {
   return (
     <>
       <Head>

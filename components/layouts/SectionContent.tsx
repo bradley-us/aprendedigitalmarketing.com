@@ -2,14 +2,12 @@ import { ReactNode } from "react"
 
 export interface ISectionContent {
   containersx?: string,
-  className?: any,
+  className?: string,
   isContainer?: boolean,
   children: ReactNode
 }
 
-const SectionContent = ({children, className, containersx, isContainer}: ISectionContent) => {
-
-
+const SectionContent = ({children, className, containersx, isContainer}: ISectionContent): JSX.Element => {
   return (
     <div className={className}>
       <div className={`${containersx} ${' '} ${ isContainer ? 'lg:container mx-auto px-8 md:px-32' : ''}`}>

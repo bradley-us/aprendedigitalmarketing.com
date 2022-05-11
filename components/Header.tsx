@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
   return (
     <header className='py-5 flex flex-row justify-between items-center'>
       <figure>
-        <Image src="/assets/img/logos/t_logo.png" width={40} height={40} alt='Logo'></Image>
+        <Image src="/assets/img/logos/logo_1.jpg" width={40} height={40} alt='Logo'></Image>
       </figure>
       <nav className='hidden sm:inline-flex flex-row justify-around gap-10 items-center'>
         <ul className='flex flex-row justify-around items-center gap-10'>

@@ -86,7 +86,7 @@ const Home: NextPage = (): JSX.Element => {
               </p>
             </span>
           </div>
-          <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
+          <div className='flex flex-col items-center bg-[#0098ED] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
               <Image src={ data.section1.content.cards.card2.picSrc } width={120} height={120} alt=''></Image>
             </figure>
@@ -94,7 +94,7 @@ const Home: NextPage = (): JSX.Element => {
             <h3 className='text-2xl font-bold'>{ data.section1.content.cards.card2.title }</h3>
 
             <span>
-              <p className='text-center text-slate-400'>
+              <p className='text-center text-slate-100'>
                 { data.section1.content.cards.card2.description }
               </p>
             </span>
@@ -143,7 +143,7 @@ const Home: NextPage = (): JSX.Element => {
               <h3 className='text-2xl'>{ data.aboutSection.title }</h3>
             </div>
 
-            <div className='font-semibold text-slate-400 flex flex-col gap-10 py-12 md:pl-10 md>pr-32'>
+            <div className='font-semibold text-slate-400 flex flex-col gap-10 py-12 md:pl-10 md:pr-32'>
               <p>{ data.aboutSection.content.description.parr1 }</p>
               <p>{ data.aboutSection.content.description.parr2 }</p>
               <p>{ data.aboutSection.content.description.parr3 }</p>

@@ -17,8 +17,8 @@ const Home: NextPage = (): JSX.Element => {
         isContainer
       >
         <section className='relative min-h-[200px]'>
-          <figure className='absolute bottom-10 right-20'>
-            <Image src={ data.aboveHero.picSrc } width={100} height={100} alt='' />
+          <figure className='absolute bottom-10 right-10 lg:right-20'>
+            <Image className='rounded-full' src={ data.aboveHero.picSrc } width={100} height={100} alt='' />
           </figure>
         </section>
       </SectionContent>
@@ -31,17 +31,16 @@ const Home: NextPage = (): JSX.Element => {
               <span>{ data.hero.heroCard.category }</span>
             </div>
 
-            <div className='rounded-tr-xl rounded-b-xl px-14 pt-8 pb-12 w-full sm:max-w-[600px] bg-[#242424]'>
+            <div className='rounded-tr-xl rounded-b-xl px-7 lg:px-14 pt-8 pb-12 w-full sm:max-w-[700px] bg-[#242424]'>
               <div className='flex flex-col gap-8'>
                 <div className='flex flex-row items-start justify-between'>
-                  <h1 className='py-2 text-4xl text-5xl font-bold text-transparent lg:text-6xl bg-clip-text bg-gradient-to-r from-myBlue to-myCian'>{ data.hero.heroCard.title }</h1>
+                  <h1 className='py-2 md:text-4xl text-3xl font-bold text-transparent lg:text-7xl bg-clip-text bg-gradient-to-r from-myBlue to-myCian'>{ data.hero.heroCard.title }</h1>
                   <figure>
-                    <Image src={ data.hero.heroCard.picSrc } width={120} height={120} alt=''></Image>
+                    <Image src={ data.hero.heroCard.picSrc } width={'100%'} height={'100%'} alt='Marketing Card Sign'></Image>
                   </figure>
                 </div>
 
-                <div className='flex flex-row items-center justify-between gap-5'>
-                  <hr className='w-3 h-[130px] bg-slate-200 border-slate-200 border-4 rounded-xl' />
+                <div className='flex flex-row items-stretch justify-between gap-5'>
                   <p className='text-slate-300 text-md md:text-lg'>
                     { data.hero.heroCard.description }
                   </p>
@@ -67,7 +66,7 @@ const Home: NextPage = (): JSX.Element => {
       </SectionContent>
 
       <SectionContent isContainer className={'bgSp1 pb-32'}>
-        <h2 className='text-4xl text-center'>{ data.section1.title }</h2>
+        <h2 className='text-2xl font-bold md:text-4xl text-center'>{ data.section1.title }</h2>
         <p className='mt-5 text-lg font-bold text-center mb-14 text-slate-400'>
         { data.section1.description }
         </p>
@@ -75,7 +74,7 @@ const Home: NextPage = (): JSX.Element => {
         <div className='grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5'>
           <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
-              <Image src={ data.section1.content.cards.card1.picSrc } width={120} height={120} alt=''></Image>
+              <Image className='rounded-full' src={ data.section1.content.cards.card1.picSrc } width='100%' height='100%' alt='Testimonio 1'></Image>
             </figure>
 
             <h3 className='text-2xl font-bold'>{ data.section1.content.cards.card1.title }</h3>
@@ -88,7 +87,7 @@ const Home: NextPage = (): JSX.Element => {
           </div>
           <div className='flex flex-col items-center bg-[#0098ED] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
-              <Image src={ data.section1.content.cards.card2.picSrc } width={120} height={120} alt=''></Image>
+              <Image className='rounded-full' src={ data.section1.content.cards.card2.picSrc } width='100%' height='100%' alt='Testimonio 2'></Image>
             </figure>
 
             <h3 className='text-2xl font-bold'>{ data.section1.content.cards.card2.title }</h3>
@@ -101,7 +100,7 @@ const Home: NextPage = (): JSX.Element => {
           </div>
           <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
-              <Image src={ data.section1.content.cards.card3.picSrc } width={120} height={120} alt=''></Image>
+              <Image className='rounded-full' src={ data.section1.content.cards.card3.picSrc } width='100%' height='100%' alt='Testimonio 3'></Image>
             </figure>
 
             <h3 className='text-2xl font-bold'>{ data.section1.content.cards.card3.title }</h3>
@@ -137,10 +136,10 @@ const Home: NextPage = (): JSX.Element => {
         isContainer
         containersx='py-20'
       >
-        <div className='flex-row items-center justify-between md:flex'>
+        <div id='aboutSection' className='flex-row items-center justify-between md:flex'>
           <div>
-            <div className='max-w-[210px] flex flex-row justify-center items-center font-bold text-[#0098ED] rounded-xl bg-slate-200 py-4 px-8'>
-              <h3 className='text-2xl'>{ data.aboutSection.title }</h3>
+            <div className='max-w-[250px] flex flex-row justify-center items-center font-bold text-[#0098ED] rounded-xl bg-slate-200 py-4 px-8'>
+              <h3 className='text-4xl'>{ data.aboutSection.title }</h3>
             </div>
 
             <div className='font-semibold text-slate-400 flex flex-col gap-10 py-12 md:pl-10 md:pr-32'>
@@ -160,19 +159,16 @@ const Home: NextPage = (): JSX.Element => {
           
       <SectionContent
         isContainer
-        containersx='text-myBlackTwo pb-20'
+        containersx='text-myBlackTwo'
       >
-          <h2 className='text-5xl font-bold text-center'>{ data.section4.title } <span className='text-[#0098ED]'>{ data.section4.titleIn2 }</span></h2>
-          <p className='text-xl text-center text-slate-400 mt-7'>
+          <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section4.title } <span className='text-[#0098ED]'>{ data.section4.titleIn2 }</span></h2>
+          <p className='text-lg md:text-xl text-center text-slate-400 mt-7'>
             { data.section4.description }
           </p>
 
-          <div className='flex flex-row items-center justify-center w-full py-20'>
+          <div className='flex flex-row items-center justify-center w-full pt-20'>
             <figure className='rounded-xl'>
               <Image className='rounded-xl' src={ data.section4.content.picSrc1 } width={500} height={320} alt=''></Image>
-            </figure>
-            <figure className='rounded-xl'>
-              <Image className='rounded-xl' src={ data.section4.content.picSrc2 } width={500} height={320} alt=''></Image>
             </figure>
           </div>
       </SectionContent>
@@ -181,7 +177,7 @@ const Home: NextPage = (): JSX.Element => {
         isContainer
         className={'bg-slate-200 py-28'}
       >
-        <h2 className='text-5xl font-bold text-center'>{ data.section5.title }</h2>
+        <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section5.title }</h2>
         <p className='text-xl text-center text-slate-400 mt-7'>
           { data.section5.description }
         </p>

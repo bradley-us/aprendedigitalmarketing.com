@@ -10,22 +10,20 @@ import Typography from '@mui/material/Typography';
 
 const steps = [
   {
-    label: 'Select campaign settings',
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: 'Selecciona la configuración de la campaña',
+    description: `Para cada campaña publicitaria que cree, puede controlar cuánto está dispuesto a gastar en clics y conversiones, en qué redes y ubicaciones geográficas desea que se muestren sus anuncios, y más.`,
   },
   {
-    label: 'Create an ad group',
+    label: 'Crea un grupo de anuncios',
     description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
+      'Un grupo de anuncios contiene uno o más anuncios que se orientan a un conjunto compartido de palabras clave.',
   },
   {
-    label: 'Create an ad',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: 'Crea un anuncio',
+    description: `Pruebe diferentes textos de anuncios para ver qué atrae a la mayoría de los clientes,
+    y aprenda a mejorar sus anuncios con funciones como las extensiones de anuncios.
+    Si tiene algún problema con sus anuncios, descubra cómo saber si
+    se están ejecutando y cómo resolver los problemas de aprobación.`,
   },
 ];
 
@@ -52,7 +50,7 @@ export default function VerticalLinearStepper() {
             <StepLabel
               optional={
                 index === 2 ? (
-                  <Typography variant="caption">Last step</Typography>
+                  <Typography variant="caption">Último paso</Typography>
                 ) : null
               }
             >
@@ -68,14 +66,14 @@ export default function VerticalLinearStepper() {
                     className='bg-[#0098ED]'
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
+                    {index === steps.length - 1 ? 'Terminar' : 'Continuar'}
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                    Atrás
                   </Button>
                 </div>
               </Box>
@@ -85,9 +83,9 @@ export default function VerticalLinearStepper() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Typography>¡Muy bien! ¡Ya completaste los pasos!</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
+            Hacerlo de nuevo
           </Button>
         </Paper>
       )}

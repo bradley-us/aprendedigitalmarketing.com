@@ -23,7 +23,7 @@ const Layout = ({title, children} : ILayout): JSX.Element => {
         <Header />
       </SectionContent>
       
-      <main id='homeInit'>
+      <main>
         {children}
       </main>
 

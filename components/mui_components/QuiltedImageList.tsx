@@ -62,8 +62,8 @@ const itemData = [
     title: 'Marketing Calendar',
   },
   {
-    img: 'Marketing Tasks',
-    title: 'Fern',
+    img: '/assets/img/gallery/10.png',
+    title: 'Marketing Tasks',
   },
   {
     img: '/assets/img/gallery/3.png',

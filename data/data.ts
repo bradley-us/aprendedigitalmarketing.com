@@ -46,9 +46,9 @@ const pageData = {
     content: {}
   },
   pushToAction: {
-    title: 'TAKE ACTION',
-    titleIn1: 'LOREM IPSUM',
-    btnTitle: 'BTN ACTION'
+    title: '¡Empieza ahora con',
+    titleIn1: 'Marketing digital!',
+    btnTitle: '¡Quiero empezar!'
   },
   aboutSection: {
     title: 'Sobre mí',

@@ -13,6 +13,7 @@ const Home: NextPage = (): JSX.Element => {
   return (
     <Layout title='Marketing Digital'>
       <SectionContent
+        id='homeInit'
         className='hidden text-white sm:block bg-gradient-to-r from-myCian to-myBlue'
         isContainer
       >
@@ -65,13 +66,13 @@ const Home: NextPage = (): JSX.Element => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E2E8F0" d="M0,224L30,197.3C60,171,120,117,180,90.7C240,64,300,64,360,96C420,128,480,192,540,202.7C600,213,660,171,720,154.7C780,139,840,149,900,170.7C960,192,1020,224,1080,224C1140,224,1200,192,1260,170.7C1320,149,1380,139,1410,133.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
       </SectionContent>
 
-      <SectionContent isContainer className={'bgSp1 pb-32'}>
+      <SectionContent isContainer className={'bgSp1 pt-16 pb-36'}>
         <h2 className='text-2xl font-bold md:text-4xl text-center'>{ data.section1.title }</h2>
         <p className='mt-5 text-lg font-bold text-center mb-14 text-slate-400'>
         { data.section1.description }
         </p>
 
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5'>
+        <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 md:gap-5'>
           <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
               <Image className='rounded-full' src={ data.section1.content.cards.card1.picSrc } width='100%' height='100%' alt='Testimonio 1'></Image>
@@ -114,7 +115,7 @@ const Home: NextPage = (): JSX.Element => {
         </div>
       </SectionContent>
 
-      <SectionContent isContainer containersx='py-20'>
+      <SectionContent isContainer containersx='py-36'>
         <div className='flex-row items-center justify-around md:flex'>
           <VerticalLinearStepper></VerticalLinearStepper>
           <br/>
@@ -122,7 +123,7 @@ const Home: NextPage = (): JSX.Element => {
         </div>
       </SectionContent>
 
-      <SectionContent isContainer containersx='my-20'>
+      <SectionContent isContainer containersx='my-20 pb-36'>
           <CustomizedSteppers></CustomizedSteppers>
       </SectionContent>
 
@@ -133,10 +134,11 @@ const Home: NextPage = (): JSX.Element => {
       />
 
       <SectionContent
+        id='aboutSection'
         isContainer
-        containersx='py-20'
+        containersx='pt-36'
       >
-        <div id='aboutSection' className='flex-row items-center justify-between md:flex'>
+        <div className='flex-row items-center justify-between md:flex'>
           <div>
             <div className='max-w-[250px] flex flex-row justify-center items-center font-bold text-[#0098ED] rounded-xl bg-slate-200 py-4 px-8'>
               <h3 className='text-4xl'>{ data.aboutSection.title }</h3>
@@ -155,11 +157,15 @@ const Home: NextPage = (): JSX.Element => {
             </figure>
           </div>
         </div>
+        
+        <div className='text-center py-16'>
+          <a href='mailto:' className='hover:bg-slate-200 transition ease-in duration-300 cursor-pointer text-gray-800 text-md font-bold bg-[#0098ED] py-4 px-7 rounded-lg text-slate-200 hover:text-slate-800'>¡Contáctame!</a>
+        </div>
       </SectionContent>
           
       <SectionContent
         isContainer
-        containersx='text-myBlackTwo'
+        containersx='text-myBlackTwo py-36'
       >
           <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section4.title } <span className='text-[#0098ED]'>{ data.section4.titleIn2 }</span></h2>
           <p className='text-lg md:text-xl text-center text-slate-400 mt-7'>
@@ -175,7 +181,7 @@ const Home: NextPage = (): JSX.Element => {
 
       <SectionContent
         isContainer
-        className={'bg-slate-200 py-28'}
+        className={'bg-slate-200 py-36'}
       >
         <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section5.title }</h2>
         <p className='text-xl text-center text-slate-400 mt-7'>

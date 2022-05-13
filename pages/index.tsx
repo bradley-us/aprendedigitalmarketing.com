@@ -151,7 +151,7 @@ const Home: NextPage = (): JSX.Element => {
             </div>
           </div>
 
-          <div className='w-full'>
+          <div className='w-full flex flex-row justify-center'>
             <figure className='rounded-xl'>
               <Image className='rounded-xl' src={ data.aboutSection.content.picSrc } width={400} height={600} alt=''></Image>
             </figure>
@@ -159,7 +159,7 @@ const Home: NextPage = (): JSX.Element => {
         </div>
         
         <div className='text-center py-16'>
-          <a href='mailto:' className='hover:bg-slate-200 transition ease-in duration-300 cursor-pointer text-gray-800 text-md font-bold bg-[#0098ED] py-4 px-7 rounded-lg text-slate-200 hover:text-slate-800'>¡Contáctame!</a>
+          <a href='mailto:contacto.aprendemarketing@gmail.com' className='hover:bg-slate-200 transition ease-in duration-300 cursor-pointer text-gray-800 text-md font-bold bg-[#0098ED] py-4 px-7 rounded-lg text-slate-200 hover:text-slate-800'>¡Contáctame!</a>
         </div>
       </SectionContent>
           

@@ -14,8 +14,8 @@ const ToAction = ({ actTitle, actTitleIn1, actBtnTitle } : {actTitle: string, ac
             <hr className='w-28 h-3 md:w-52 md:h-6 bg-gradient-to-r from-myCian to-myBlue border-0 rounded-xl' />
           </div>
 
-          <a href='mailto:'>
-            <div className='sm:m-0 mt-5 rounded-xl bg-gradient-to-r from-myCian to-myBlue py-2 px-6 md:py-4 md:px-12'>
+          <a href='mailto:contacto.aprendemarketing@gmail.com'>
+            <div className='flex flex-row items-center justify-center sm:m-0 mt-5 rounded-xl bg-gradient-to-r from-myCian to-myBlue py-2 px-6 md:py-4 md:px-12'>
               <span className='text-center text-xl md:text-2xl'>
                 { actBtnTitle }
               </span>

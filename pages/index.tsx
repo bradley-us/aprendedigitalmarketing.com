@@ -14,11 +14,11 @@ const Home: NextPage = (): JSX.Element => {
     <Layout title='Marketing Digital'>
       <SectionContent
         id='homeInit'
-        className='hidden text-white sm:block bg-gradient-to-r from-myCian to-myBlue'
+        className='text-white sm:block bg-gradient-to-r from-myCian to-myBlue'
         isContainer
       >
         <section className='relative min-h-[200px]'>
-          <figure className='absolute bottom-10 right-10 lg:right-20'>
+          <figure className='absolute hidden xl:block bottom-10 right-10 lg:right-20'>
             <Image className='rounded-full' src={ data.aboveHero.picSrc } width={100} height={100} alt='' />
           </figure>
         </section>
@@ -26,16 +26,16 @@ const Home: NextPage = (): JSX.Element => {
 
       {/* BLACK CARD */}
       <SectionContent isContainer>
-        <div className='flex-row justify-between sm:flex'>
-          <div className='z-10 sm:mt-[-170px] sm:p-0 py-10 flex flex-col'>
+        <div className='flex-row flex-wrap justify-between gap-20 sm:flex sm:justify-center'>
+          <div className='z-10 mt-[-200px] sm:mt-[-170px] sm:p-0 py-10 flex flex-col'>
             <div className='flex justify-center items-center py-1 rounded-t-xl text-[#FF9900] font-bold bg-[#1A1A1A] w-32'>
               <span>{ data.hero.heroCard.category }</span>
             </div>
 
-            <div className='rounded-tr-xl rounded-b-xl px-7 lg:px-14 pt-8 pb-12 w-full sm:max-w-[700px] bg-[#242424]'>
+            <div className='rounded-tr-xl rounded-b-xl px-7 lg:px-14 pt-8 pb-12 w-full sm:max-w-[650px] bg-[#242424]'>
               <div className='flex flex-col gap-8'>
                 <div className='flex flex-row items-start justify-between'>
-                  <h1 className='py-2 md:text-4xl text-3xl font-bold text-transparent lg:text-7xl bg-clip-text bg-gradient-to-r from-myBlue to-myCian'>{ data.hero.heroCard.title }</h1>
+                  <h1 className='py-2 text-3xl font-bold text-transparent md:text-4xl lg:text-7xl bg-clip-text bg-gradient-to-r from-myBlue to-myCian'>{ data.hero.heroCard.title }</h1>
                   <figure>
                     <Image src={ data.hero.heroCard.picSrc } width={'100%'} height={'100%'} alt='Marketing Card Sign'></Image>
                   </figure>
@@ -50,7 +50,7 @@ const Home: NextPage = (): JSX.Element => {
             </div>
           </div>
 
-          <div className='z-10 flex flex-col items-center justify-center gap-5 sm:mt-32'>
+          <div className='z-10 flex flex-col items-center justify-center gap-5 md:mt-32'>
             <Image src={ data.hero.picSrc } width={250} height={250} alt=''></Image>
             <div className='rounded-xl flex justify-center items-center py-4 px-7 max-w-[300px] bg-slate-300'>
               <p className='text-center'>
@@ -67,13 +67,13 @@ const Home: NextPage = (): JSX.Element => {
       </SectionContent>
 
       <SectionContent isContainer className={'bgSp1 pt-16 pb-36'}>
-        <h2 className='text-2xl font-bold md:text-4xl text-center'>{ data.section1.title }</h2>
+        <h2 className='text-2xl font-bold text-center md:text-4xl'>{ data.section1.title }</h2>
         <p className='mt-5 text-lg font-bold text-center mb-14 text-slate-400'>
         { data.section1.description }
         </p>
 
-        <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 md:gap-5'>
-          <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
+        <div className='flex flex-wrap items-start justify-center gap-3 md:gap-5'>
+          <div className='flex flex-col items-center max-w-[330px] min-h-[520px] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
               <Image className='rounded-full' src={ data.section1.content.cards.card1.picSrc } width='100%' height='100%' alt='Testimonio 1'></Image>
             </figure>
@@ -86,7 +86,7 @@ const Home: NextPage = (): JSX.Element => {
               </p>
             </span>
           </div>
-          <div className='flex flex-col items-center bg-[#0098ED] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
+          <div className='flex flex-col items-center max-w-[330px] min-h-[520px] bg-[#0098ED] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
               <Image className='rounded-full' src={ data.section1.content.cards.card2.picSrc } width='100%' height='100%' alt='Testimonio 2'></Image>
             </figure>
@@ -99,7 +99,7 @@ const Home: NextPage = (): JSX.Element => {
               </p>
             </span>
           </div>
-          <div className='flex flex-col items-center justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
+          <div className='flex flex-col items-center max-w-[330px] min-h-[520px] justify-center gap-5 py-12 bg-white shadow-lg px-7 shadow-cyan-500/50 rounded-xl'>
             <figure>
               <Image className='rounded-full' src={ data.section1.content.cards.card3.picSrc } width='100%' height='100%' alt='Testimonio 3'></Image>
             </figure>
@@ -115,7 +115,7 @@ const Home: NextPage = (): JSX.Element => {
         </div>
       </SectionContent>
 
-      <SectionContent isContainer containersx='py-36'>
+      <SectionContent isContainer containersx='md:py-36 py-20'>
         <div className='flex-row items-center justify-around md:flex'>
           <VerticalLinearStepper></VerticalLinearStepper>
           <br/>
@@ -123,7 +123,7 @@ const Home: NextPage = (): JSX.Element => {
         </div>
       </SectionContent>
 
-      <SectionContent isContainer containersx='my-20 pb-36'>
+      <SectionContent isContainer containersx='my-20 md:pb-36'>
           <CustomizedSteppers></CustomizedSteppers>
       </SectionContent>
 
@@ -136,29 +136,29 @@ const Home: NextPage = (): JSX.Element => {
       <SectionContent
         id='aboutSection'
         isContainer
-        containersx='pt-36'
+        containersx='md:pt-36 pt-20'
       >
-        <div className='flex-row items-center justify-between md:flex'>
-          <div>
-            <div className='max-w-[250px] flex flex-row justify-center items-center font-bold text-[#0098ED] rounded-xl bg-slate-200 py-4 px-8'>
+        <div className='flex-col items-start justify-between lg:flex-row md:flex'>
+          <div className=''>
+            <div className='max-w-[250px] flex flex-row justify-center items-center font-bold text-[#0098ED] rounded-xl bg-slate-200 py-4 md:px-8'>
               <h3 className='text-4xl'>{ data.aboutSection.title }</h3>
             </div>
 
-            <div className='font-semibold text-slate-400 flex flex-col gap-10 py-12 md:pl-10 md:pr-32'>
+            <div className='flex flex-col gap-10 py-12 font-semibold text-slate-400 md:pl-10 lg:pr-32'>
               <p>{ data.aboutSection.content.description.parr1 }</p>
               <p>{ data.aboutSection.content.description.parr2 }</p>
               <p>{ data.aboutSection.content.description.parr3 }</p>
             </div>
           </div>
 
-          <div className='w-full flex flex-row justify-center'>
+          <div className='flex flex-row justify-center w-full min-w-[300px]'>
             <figure className='rounded-xl'>
               <Image className='rounded-xl' src={ data.aboutSection.content.picSrc } width={400} height={600} alt=''></Image>
             </figure>
           </div>
         </div>
         
-        <div className='text-center py-16'>
+        <div className='py-16 text-center'>
           <a href='mailto:contacto.aprendemarketing@gmail.com' className='hover:bg-slate-200 transition ease-in duration-300 cursor-pointer text-gray-800 text-md font-bold bg-[#0098ED] py-4 px-7 rounded-lg text-slate-200 hover:text-slate-800'>¡Contáctame!</a>
         </div>
       </SectionContent>
@@ -167,8 +167,8 @@ const Home: NextPage = (): JSX.Element => {
         isContainer
         containersx='text-myBlackTwo py-36'
       >
-          <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section4.title } <span className='text-[#0098ED]'>{ data.section4.titleIn2 }</span></h2>
-          <p className='text-lg md:text-xl text-center text-slate-400 mt-7'>
+          <h2 className='text-3xl font-bold text-center md:text-4xl'>{ data.section4.title } <span className='text-[#0098ED]'>{ data.section4.titleIn2 }</span></h2>
+          <p className='text-lg text-center md:text-xl text-slate-400 mt-7'>
             { data.section4.description }
           </p>
 
@@ -181,9 +181,9 @@ const Home: NextPage = (): JSX.Element => {
 
       <SectionContent
         isContainer
-        className={'bg-slate-200 py-36'}
+        className={'bg-slate-200 py-20 lg:py-36'}
       >
-        <h2 className='text-3xl md:text-4xl font-bold text-center'>{ data.section5.title }</h2>
+        <h2 className='text-3xl font-bold text-center md:text-4xl'>{ data.section5.title }</h2>
         <p className='text-xl text-center text-slate-400 mt-7'>
           { data.section5.description }
         </p>
